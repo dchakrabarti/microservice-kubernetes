@@ -2,17 +2,13 @@ pipeline {
     agent any
     
     stages {
-        stage('DeployToProduction') {
-            when {
-                branch 'master'
-            }   
+        stage('DeployToProduction') {   
             steps {
                 input 'Deploy to Production?'
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
                     configs: 'microservices.yml',
-                    enableConfigSubstitution: true
                 )   
             }   
         }   
