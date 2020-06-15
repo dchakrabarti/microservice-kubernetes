@@ -8,7 +8,7 @@ pipeline {
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'microservices.yml',
+                    configs: 'microservices.yaml',
                 )   
             }   
         }   
