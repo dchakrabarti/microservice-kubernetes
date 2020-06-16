@@ -1,7 +1,5 @@
 pipeline {
     agent any
-    environment {
-        DOCKER_IMAGE_NAME = "dchakrab/customer
     stages {
         stage('MVN Built') {
             steps {
